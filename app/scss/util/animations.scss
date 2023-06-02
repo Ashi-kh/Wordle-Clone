@@ -1,0 +1,47 @@
+@use 'functions' as *;
+
+@keyframes flip-in {
+    from {
+        transform: rotatex(0deg);
+    }
+    to {
+        transform: rotatex(-90deg);
+    }
+}
+
+@keyframes flip-out {
+    from {
+        transform: rotatex(-90deg);
+    }
+    to {
+        transform: rotatex(0deg);
+    }
+}
+
+.flip-in {
+    animation: flip-in 250ms;
+    animation-fill-mode: forwards;
+}
+
+.flip-out {
+    animation: flip-out 250ms; 
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(rem(-10));
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .jump {
+    animation: jump 250ms;
+    animation-fill-mode: forwards;
+  }
